@@ -11,6 +11,7 @@ int main(){
         float densidadepopulacional1,densidadepopulacional2;
         float pibpercapita1,pibpercapita2;
         float superpoder1, superpoder2;
+        int opcao;
 
           // Coleta dados carta 1 (Armazena dados nas respectivas strings)
 
@@ -74,6 +75,40 @@ int main(){
         else {
             printf("Carta 2: %s venceu! \n", cidade2);
         }
+
+
+        // Seleciona os atributos a serem comparados  
+    printf("***Escolha os atributos a serem comparados: *** \n");
+    printf("1. População: \n");
+    printf("2. Pontos turistico: \n");
+    scanf("%d", &opcao);
+        
+    switch (opcao) { 
+     case 1:
+        if (populacao1 > populacao2) {
+            printf("População 1 venceu! %d\n", populacao1); 
+            break;
+        } else if (populacao1 == populacao2) {
+            printf("População 2 venceu! %d\n", populacao2);
+            break;     
+        } else {
+            printf("Empatou. \n");
+            break;
+        }
+            case 2:
+         if (pontosturisticos1 > pontosturisticos2){
+            printf("Pontos turistico 1 venceu! \n");
+        break;
+         } else if(pontosturisticos1 == pontosturisticos2) {
+            printf("Pontos turistico 2 venceu! \n");
+         } else {
+            printf("Empatou. \n");
+        break;
+        }
+        default:
+        printf("Opção inválida");
+        break;
+    }
 
 
           // Comparação das Cartas
